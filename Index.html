@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DMN</title>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --th-bg: #f0f0f0;
+    --td-color: hsla(0, 20%, 51%, 0.5);
+    --blockquote-bg: #f9f9f9;
+    --blockquote-border: #666;
+  }
+    body {
+      font-family: "Noto Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+      line-height: 1.6;
+      margin: 40px 20%;
+      background-color: var(--bg-color);
+    color: var(--text-color);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      border: 1px solid #999;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    th {
+      /* background-color: #f0f0f0; */
+      background-color: var(--th-bg);
+    }
+
+    td {
+      /* color: hsla(0, 20%, 51%, 0.5); */
+      color: var(--td-color);
+      transition: color 1.1s ease-in-out;
+    }
+
+    td:hover {
+      /* color: #a67c00; */
+      color: #ffd700;
+      text-shadow:
+        0 0 5px rgba(255, 215, 0, 0.5),
+        0 0 10px rgba(255, 215, 0, 0.3),
+        0 0 15px rgba(255, 215, 0, 0.2);
+      ;
+    }
+
+    blockquote {
+      margin: 30px 0;
+      padding: 10px 20px;
+      /* background-color: #f9f9f9; */
+      background-color: var(--blockquote-bg);
+    border-left-color: var(--blockquote-border);
+      border-left: 6px solid #666;
+      font-style: italic;
+    }
+    /* classes */
+    .dark-theme {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --th-bg: #2d2d2d;
+    --td-color: hsla(0, 20%, 70%, 0.7);
+    --blockquote-bg: #2a2a2a;
+    --blockquote-border: #666;
+    }
+    .test01 {
+      width: 64px;
+      height: 51px;
+      box-sizing: content-box;
+    }
+    /* .data-lang-btn {
+      make same size as a light\dark-theme
+    } */
+
+    /*  */
+    [data-lang] {
+      display: none;
+    }
+
+    [data-lang].active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="color-scheme-switcher">
+    <button class="test01" data-theme-btn="light">🌞</button>
+    <button class="test01" data-theme-btn="dark">🌚</button>
+  </div>
+  <div class="language-switcher">
+    <!-- <button data-lang-btn="ru">Русский</button>
+    <button data-lang-btn="en">English</button> -->
+    <button data-lang-btn="ru"><img src="img/ru.png" alt=""></button>
+    <button data-lang-btn="en"><img src="img/us.png" alt=""></button>    
+    <!-- <button data-lang-btn="">қазақ тілі</button> -->
+  </div>
+  <div class="content">
+    <div data-lang="ru" class="active">
+      <div class="header">
+        <h1>DMN и अहंकार подбили, повторяю, это дерьмо подбито!</h1>
+        <p>чеклист</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Категория</th>
+            <th>Практика</th>
+            <th>Инструкция / Напоминание</th>
+            <th>Время</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Медитация</td>
+            <td>Осознанное дыхание</td>
+            <td>Наблюдай вдох-выдох. Не вмешивайся.</td>
+            <td>10–20 мин</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Випассана</td>
+            <td>Мысли — просто объекты. Не отождествляйся.</td>
+            <td>15–30 мин</td>
+          </tr>
+          <tr>
+            <td>Пранаяма</td>
+            <td>Нади Шодхана</td>
+            <td>Попеременное дыхание. Мысленно повторяй: «спокойствие».</td>
+            <td>5–10 мин</td>
+          </tr>
+          <tr>
+            <td>Самоисследование</td>
+            <td>Вопрос «Кто я?»</td>
+            <td>Neti-neti: «Я — не тело, не ум, не эмоции…»</td>
+            <td>5 мин и более</td>
+          </tr>
+          <tr>
+            <td>Бескорыстие</td>
+            <td>Карма-йога</td>
+            <td>Действуй без ожидания плодов.</td>
+            <td>В течение дня</td>
+          </tr>
+          <tr>
+            <td>Наблюдение</td>
+            <td>Состояние свидетеля (Sākṣī)</td>
+            <td>В любой ситуации: «Я наблюдаю, не реагирую».</td>
+            <td>Мгновенно</td>
+          </tr>
+          <tr>
+            <td>Альтруизм</td>
+            <td>Малое служение</td>
+            <td>Помоги кому-то без ожидания благодарности.</td>
+            <td>1 раз в день</td>
+          </tr>
+          <tr>
+            <td>Преданность</td>
+            <td>Концентрация на высшем</td>
+            <td>Повтор мантры, молитва, слушание киртана.</td>
+            <td>10–15 мин</td>
+          </tr>
+          <tr>
+            <td>Осознанность</td>
+            <td>Пауза при внутреннем диалоге</td>
+            <td>«Мысль — не факт. Отпускаю её».</td>
+            <td>По ситуации</td>
+          </tr>
+        </tbody>
+      </table>
+      <blockquote>
+        Напоминание дня: «Я не тело. Я не ум. Я не мои мысли. Я — наблюдающее сознание».
+      </blockquote>
+    </div>
+    <div data-lang="en">
+      <div class="header">
+        <h1>DMN n अहंकार down, i repeat that ish is down!</h1>
+        <p>checklist</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Catee</th>
+            <th>Practee</th>
+            <th>Instruction / Reminder</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Meditation</td>
+            <td>Conscious Breathing</td>
+            <td>Observe the inhalation-exhalation. Do not interfere</td>
+            <td>10-20 min</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Vipassana</td>
+            <td>Minds are just objects. Don't be identified</td>
+            <td>15-30 min</td>
+          </tr>
+          <tr>
+            <td>Pranayama</td>
+            <td>Nadi Shodhana</td>
+            <td>Intermittent breathing. Repeat in your mind, "calmness."</td>
+            <td>5-10 min</td>
+          </tr>
+          <tr>
+            <td>Self-Research</td>
+            <td>The "Who am I?"</td>
+            <td>Neti-neti: "I am not the body, the mind, the emotions..."</td>
+            </td>
+            <td>5 min or more</td>
+          </tr>
+          <tr>
+            <td>Unselfishness</td>
+            <td>Karma Yoga</td>
+            <td>Act without expecting fruit</td>
+            <td>In the course of a day</td>
+          </tr>
+          <tr>
+            <td>Surveillance</td>
+            <td>Witnessing (Sākṣī)</td>
+            <td>In any situation, "I am observing, not reacting."</td>
+            <td>Instantly</td>
+          </tr>
+          <tr>
+            <td>Altrusiveness</td>
+            <td>Small Service</td>
+            <td>Help someone without expecting a thank you</td>
+            <td>1 time a day</td>
+          </tr>
+          <tr>
+            <td>Dedication</td>
+            <td>Concentration on the highest</td>
+            <td>Mantra recitation, prayer, listening to kirtan</td>
+            <td>10-15 min</td>
+          </tr>
+          <tr>
+            <td>Awareness</td>
+            <td>Pause for inner dialog</td>
+            <td>"A thought is not a fact. Letting it go."</td>
+            <td>Situation</td>
+          </tr>
+        </tbody>
+      </table>
+      <blockquote>
+        Reminder of the day, "I am not the body. I am not the mind. I am not my thoughts. I am the observing
+        consciousness."
+      </blockquote>
+    </div>
+    <!-- <div class="kz"></div> -->
+  </div>
+  <script>
+    // Language switching
+    document.querySelectorAll('[data-lang-btn]').forEach(button => {
+      button.addEventListener('click', function () {
+        const lang = this.getAttribute('data-lang-btn');
+
+        document.querySelectorAll('[data-lang]').forEach(el => {
+          el.classList.remove('active');
+        });
+
+        document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => {
+          el.classList.add('active');
+        });
+      });
+    });
+  </script>
+  <script>
+    // Theme switching
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.body.classList.add(savedTheme + '-theme');
+  
+    document.querySelectorAll('[data-theme-btn]').forEach(button => {
+      button.addEventListener('click', function() {
+        const theme = this.getAttribute('data-theme-btn');
+        document.body.classList.remove('light-theme', 'dark-theme');
+        document.body.classList.add(theme + '-theme');
+        localStorage.setItem('theme', theme);
+      });
+    });
+  </script>
+</body>
+
+</html>
